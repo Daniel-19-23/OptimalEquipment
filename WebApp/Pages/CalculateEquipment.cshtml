@@ -1,0 +1,107 @@
+﻿@page
+@model WebApp.Pages.CalculateEquipmentModel
+@{
+    ViewData["Title"] = "Calcular Equipo";
+}
+
+@section Head{
+
+}
+
+@section Scripts{
+    @* App *@
+    <script src="~/js/app/calculateEquipment.js?rnd=00" charset='utf-8'></script>
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@* Formulario *@
+<div class="row">    
+    <div class="col-md-6 col-sm-12">
+        <h4>Información</h4>
+        @* Calorias *@
+        <div class="mb-3">
+            <label for="maximumCalories" class="form-label">Mínimo de calorías *</label>
+            <input type="number" class="form-control" id="maximumCalories">
+            <div class="form-text text-danger" id="maximumCaloriesAlert" style="display: none">Ingrese calorías *</div>
+        </div>
+
+        @* Peso *@
+        <div class="mb-3">
+            <label for="maximumWeight" class="form-label">Peso máximo *</label>
+            <div class="input-group">
+                <input type="number" class="form-control" id="maximumWeight">
+                <span class="input-group-text">Kg</span>
+            </div>
+            <div class="form-text text-danger" id="maximumWeightAlert" style="display: none">Ingrese un peso *</div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        @* Seleccion de equipamento *@
+        <h4>Equipamento</h4>
+
+        @* Nombre del equipo *@
+        <div class="mb-3">
+            <div class="input-group">
+                <span class="input-group-text">Nombre *</span>
+                <input type="text" class="form-control" placeholder="Nombre" id="equipmentName">
+            </div>
+            <div class="form-text text-danger" id="equipmentNameAlert" style="display: none">Ingrese un nombre *</div>
+        </div>
+
+        @* Calorias *@
+        <div class="mb-3">
+            <div class="input-group">
+                <span class="input-group-text">Calorías *</span>
+                <input type="number" class="form-control" placeholder="11,5" id="equipmentCalories">
+            </div>
+            <div class="form-text text-danger" id="equipmentCaloriesAlert" style="display: none">Ingrese calorías *</div>
+        </div>
+
+        @* Peso *@
+        <div class="mb-3">
+            <div class="input-group">
+                <span class="input-group-text">Peso *</span>
+                <input type="number" class="form-control" placeholder="20.8" id="equipmentWeight">
+                <span class="input-group-text">Kg</span>
+            </div>
+            <div class="form-text text-danger" id="equipmentWeightAlert" style="display: none">Ingrese un peso *</div>
+        </div>
+
+        <button type="button" class="btn btn-outline-dark" onclick="addEquipment()">Agregar</button>
+    </div>
+</div>
+<br />
+
+@* Tabla de equipamiento *@
+<div class="row">
+    <div class="col-12">
+        <table class="table table-striped-columns table-hover table-bordered" id="tableEquipment" style="display: none">
+            <thead>
+                <tr class="text-center">
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Calorías</th>
+                    <th scope="col">Peso</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="listTr">
+            </tbody>
+        </table>
+        <div class="form-text text-danger" id="listEquipmentAlert" style="display: none">Ingrese más de 3 equipamientos *</div>
+    </div>
+</div>
+<hr />
+
+@* Resultado *@
+<div class="row">
+    <button type="submit" class="btn btn-outline-dark" onclick="sendData()">Calcular</button>
+    <div class="col-md-8 offset-md-2 col-sm-12">
+    <br />
+
+        @* Tabla de resultado *@
+        <table class="table table-striped-columns table-hover table-bordered table-sm" id="result">
+            
+        </table>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+C:\Users\danii\Downloads\Prueba tecnica\ScalarOptimal\ScalarOptimal\OptimalEquipment.Entities\bin\Debug\net7.0\OptimalEquipment.Entities.deps.json
+C:\Users\danii\Downloads\Prueba tecnica\ScalarOptimal\ScalarOptimal\OptimalEquipment.Entities\bin\Debug\net7.0\OptimalEquipment.Entities.dll
+C:\Users\danii\Downloads\Prueba tecnica\ScalarOptimal\ScalarOptimal\OptimalEquipment.Entities\bin\Debug\net7.0\OptimalEquipment.Entities.pdb
+C:\Users\danii\Downloads\Prueba tecnica\ScalarOptimal\ScalarOptimal\OptimalEquipment.Entities\obj\Debug\net7.0\OptimalEquipment.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danii\Downloads\Prueba tecnica\ScalarOptimal\ScalarOptimal\OptimalEquipment.Entities\obj\Debug\net7.0\OptimalEquipment.Entities.AssemblyInfoInputs.cache
+C:\Users\danii\Downloads\Prueba tecnica\ScalarOptimal\ScalarOptimal\OptimalEquipment.Entities\obj\Debug\net7.0\OptimalEquipment.Entities.AssemblyInfo.cs
+C:\Users\danii\Downloads\Prueba tecnica\ScalarOptimal\ScalarOptimal\OptimalEquipment.Entities\obj\Debug\net7.0\OptimalEquipment.Entities.csproj.CoreCompileInputs.cache
+C:\Users\danii\Downloads\Prueba tecnica\ScalarOptimal\ScalarOptimal\OptimalEquipment.Entities\obj\Debug\net7.0\OptimalEquipment.Entities.dll
+C:\Users\danii\Downloads\Prueba tecnica\ScalarOptimal\ScalarOptimal\OptimalEquipment.Entities\obj\Debug\net7.0\refint\OptimalEquipment.Entities.dll
+C:\Users\danii\Downloads\Prueba tecnica\ScalarOptimal\ScalarOptimal\OptimalEquipment.Entities\obj\Debug\net7.0\OptimalEquipment.Entities.pdb
+C:\Users\danii\Downloads\Prueba tecnica\ScalarOptimal\ScalarOptimal\OptimalEquipment.Entities\obj\Debug\net7.0\ref\OptimalEquipment.Entities.dll

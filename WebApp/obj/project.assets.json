@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "OptimalEquipment.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/OptimalEquipment.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OptimalEquipment.Entities.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "OptimalEquipment.Entities/1.0.0": {
+      "type": "project",
+      "path": "../OptimalEquipment.Entities/OptimalEquipment.Entities.csproj",
+      "msbuildProject": "../OptimalEquipment.Entities/OptimalEquipment.Entities.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "OptimalEquipment.Entities >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\danii\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj": {
+              "projectPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

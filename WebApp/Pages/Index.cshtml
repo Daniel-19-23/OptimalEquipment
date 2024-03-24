@@ -1,10 +1,21 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Inicio";
+}
+
+@section Head{
+
+}
+
+@section Scripts{
+    @* App *@
+    <script src="~/js/app/newClient.js?rnd=06"></script>
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Bienvenido</h1>
+    <p>Esta app esta diseñada para indicar un conjunto de elementos óptimos basado en que cumplan el mínimo de calorías requeridas y menor peso posible.</p>
+
+    <a class="btn btn-outline-dark" asp-area="" asp-page="/CalculateEquipment">Comenzar</a>
 </div>
