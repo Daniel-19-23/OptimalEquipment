@@ -4,6 +4,7 @@ using OptimalEquipment.Entities.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using WebApp.Contexts;
 
 namespace WebApp.Controllers
 {
@@ -11,13 +12,49 @@ namespace WebApp.Controllers
     [ApiController]
     public class CalculateEquipmentController : ControllerBase
     {
+        private readonly ConnectionSQLServer _context;
+
+        public CalculateEquipmentController(ConnectionSQLServer context)
+        {
+            _context = context;
+        }
+
         // GET api/<CalculateEquipmentController>/GetMountainClimbingCalculation
         [HttpPost("GetMountainClimbingCalculation")]
-        public MountainWrapper GetMountainClimbingCalculation([FromBody]MountainWrapper wr)
+        public ClimbingWrapper GetMountainClimbingCalculation([FromBody]ClimbingWrapper wr)
         {
+            // Repositorios
+            var repoEquipments = _context.Equipments;
+            var repoClimbings = _context.Climbings;
+
+            // Variables
             var maximumWeight = wr.MaximumWeight;
             var maximumCalories = wr.MaximumCalories;
             var equipments = wr.Equipments;
+
+            // Objetos
+            Climbing climbing = new()
+            {
+                Id = Guid.NewGuid(),
+                MyKey = Guid.NewGuid(),
+                CreationDate = DateTime.Now,
+                MaximumCalories = maximumCalories,
+                MaximumWeight = maximumWeight,
+            };
+
+            repoClimbings.Add(climbing);
+
+            // Bucle para el quipamiento
+            foreach (var item in equipments)
+            {
+                item.Id = Guid.NewGuid();
+                item.CreationDate = DateTime.Now;
+                item.Name = item.Name;
+                item.Calories = item.Calories;
+                item.Weight = item.Weight;
+                item.IsSelected = false;
+                item.IdClimbing = climbing.Id;
+            }
 
             // Filtrar los elementos que tienen un peso menor o igual al peso máximo
             var viableEquipments = equipments.Where(e => e.Weight <= maximumWeight).ToList();
@@ -45,13 +82,30 @@ namespace WebApp.Controllers
             }
 
             // Crear un nuevo objeto MountainWrapper con la combinación óptima de elementos
-            var newWr = new MountainWrapper
+            var newWr = new ClimbingWrapper
             {
                 MaximumWeight = bestWeight,
                 MaximumCalories = bestCalories,
                 Equipments = bestCombination
             };
 
+            // Iterar sobre los equipamientos
+            foreach (var item in equipments)
+            {
+                // Verificar si el equipamiento está presente en bestCombination
+                if (bestCombination.Any(e => e.Id == item.Id))
+                {
+                    // Si está presente, establecer IsSelected en true
+                    item.IsSelected = true;
+                }
+
+                repoEquipments.Add(item);
+            }
+
+            // Guardo los datos
+            _context.SaveChanges();
+
+            // Retorno el mejor resultado
             return newWr;
         }
 

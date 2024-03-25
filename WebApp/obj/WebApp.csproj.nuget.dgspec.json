@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\WebApp\\WebApp.csproj": {}
+    "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj": {
+    "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj",
         "projectName": "OptimalEquipment.Entities",
-        "projectPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj",
+        "projectPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj",
         "packagesPath": "C:\\Users\\danii\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\OptimalEquipment.Entities\\obj\\",
+        "outputPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\OptimalEquipment.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danii\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\WebApp\\WebApp.csproj": {
+    "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\WebApp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\WebApp\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\WebApp\\WebApp.csproj",
+        "projectPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\WebApp\\WebApp.csproj",
         "packagesPath": "C:\\Users\\danii\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\WebApp\\obj\\",
+        "outputPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danii\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +83,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj": {
-                "projectPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj"
+              "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj": {
+                "projectPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj"
               }
             }
           }
@@ -98,6 +98,16 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.17, )"
+            },
+            "Microsoft.SqlServer.Server": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

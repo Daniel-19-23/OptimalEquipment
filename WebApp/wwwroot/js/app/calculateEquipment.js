@@ -31,14 +31,14 @@ function addEquipment() {
 
         // Equipamento
         let equipment = {
-            id: countId,
             name: equipmentName,
             calories: equipmentCalories,
-            weight: equipmentWeight
+            weight: equipmentWeight,
+            isSelected: false,
         };
 
         // Inserta el objeto equipment en listEquipment, usando el id como clave
-        listEquipment[equipment.id] = equipment;
+        listEquipment[countId] = equipment;
 
         // Capturar el elemento por su ID
         const listTr = document.getElementById('listTr');
@@ -162,19 +162,19 @@ function sendData() {
         let listEquipmentArray = Object.values(listEquipment);
 
         listEquipmentArray = listEquipmentArray.map(equipment => ({
-            id:       equipment.id,
-            name:     equipment.name,
-            calories: equipment.calories,
-            weight:   equipment.weight
+            name:         equipment.name,
+            calories:     equipment.calories,
+            weight:       equipment.weight,
+            isSelected:   equipment.isSelected,
         }));
 
         let data = {
             maximumCalories: maximumCalories,
             maximumWeight: maximumWeight,
-            equipments: listEquipmentArray 
+            equipments: listEquipmentArray,
         };
 
-        data = getDataStatic();
+        //data = getDataStatic();
 
         fetch('api/CalculateEquipment/GetMountainClimbingCalculation', {
             method: 'POST', // Método HTTP utilizado para la solicitud
@@ -236,42 +236,41 @@ function sendData() {
     }
 }
 
-
-function getDataStatic() {
-    return data = {
-        "maximumCalories": 15,
-        "maximumWeight": 10,
-        "equipments": [
-            {
-                "id": 2,
-                "name": "E1",
-                "calories": 3,
-                "weight": 5
-            },
-            {
-                "id": 3,
-                "name": "E2",
-                "calories": 5,
-                "weight": 3
-            },
-            {
-                "id": 4,
-                "name": "E3",
-                "calories": 2,
-                "weight": 5
-            },
-            {
-                "id": 5,
-                "name": "E4",
-                "calories": 8,
-                "weight": 1
-            },
-            {
-                "id": 6,
-                "name": "E5",
-                "calories": 3,
-                "weight": 2
-            }
-        ]
-    }
-}
+//function getDataStatic() {
+//    return data = {
+//        "maximumCalories": 15,
+//        "maximumWeight": 10,
+//        "equipments": [
+//            {
+//                "name": "E1",
+//                "calories": 3,
+//                "weight": 5,
+//                "isSelected": false,
+//            },
+//            {
+//                "name": "E2",
+//                "calories": 5,
+//                "weight": 3,
+//                "isSelected": false,
+//            },
+//            {
+//                "name": "E3",
+//                "calories": 2,
+//                "weight": 5,
+//                "isSelected": false,
+//            },
+//            {
+//                "name": "E4",
+//                "calories": 8,
+//                "weight": 1,
+//                "isSelected": false,
+//            },
+//            {
+//                "name": "E5",
+//                "calories": 3,
+//                "weight": 2,
+//                "isSelected": false,
+//            }
+//        ]
+//    }
+//}

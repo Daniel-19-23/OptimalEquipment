@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OptimalEquipment.Entities.Business
 {
-    public class MountainWrapper
+    public class ClimbingWrapper
     {
         public int MaximumWeight { get; set; }
         public int MaximumCalories { get; set; }

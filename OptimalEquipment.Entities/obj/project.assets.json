@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj",
       "projectName": "OptimalEquipment.Entities",
-      "projectPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj",
+      "projectPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\OptimalEquipment.Entities\\OptimalEquipment.Entities.csproj",
       "packagesPath": "C:\\Users\\danii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\ScalarOptimal\\ScalarOptimal\\OptimalEquipment.Entities\\obj\\",
+      "outputPath": "C:\\Users\\danii\\Downloads\\Prueba tecnica\\Entrega\\OptimalEquipment\\OptimalEquipment\\OptimalEquipment.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danii\\AppData\\Roaming\\NuGet\\NuGet.Config",
